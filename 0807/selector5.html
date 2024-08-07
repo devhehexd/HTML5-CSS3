@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* a[href] {color: red;} */
+    a[href="https://www.nate.com"] {color: red;}
+    a[href^="ftp"] {color: green;} /*^: "xxx"로 시작하는*/
+    /*a[href$="443"] {color: pink;}*/ /*$: "xxx"로 끝나는*/
+    a[href*="naver"] {color: pink;} /*"xxx"*가 포함된*/
+  </style>
+</head>
+<body>
+  <h1>Search Engine</h1>
+  <ul>
+    <li><a href="https://www.naver.com:443">Naver</a></li>
+    <li><a href="ftp://google.com:21">Google</a></li>
+    <li><a href="https://www.nate.com">Nate</a></li>
+    <li><a name="daum">Daum</a></li>
+  </ul>
+</body>
+</html>
