@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>JavaScript Operator</h1>
+  <script>
+    // let age = 'Hello, World';
+    // console.log(typeof age); //string
+    // age = 28;
+    // console.log(typeof age); //number
+    // age = 4 > 7;
+    // console.log(typeof age); //boolean
+    // let address;
+    // console.log(typeof address); //undifined
+    // address = null;
+    // console.log(typeof address); //object
+    // address = [1,2,3];
+    // console.log(typeof address); //object
+    // address = {name: 'Jimin', age: 28};
+    // console.log(typeof address); //object
+    // address = () => {console.log('Hello, World');};
+    // console.log(typeof address); //function
+    let fruits = ['Mango', 'Melon', 'Apple'];
+    console.log(fruits);
+    delete fruits[1];
+    console.log(fruits); //공간은 남아있고 값만 삭제
+    console.log(fruits[1]); //undifined
+    let car = {name: 'Sonanta', price: '30000000', maker: 'Hyundai'};
+    console.log(car);
+    delete car.price; //멤버를 삭제
+    console.log(car); 
+    console.log('price' in car); //false 
+    console.log('maker' in car); //truth
+    //원래는 ['maker']와 같이 사용해야하나 괄호 생략가능
+    
+  </script>
+</body>
+</html>

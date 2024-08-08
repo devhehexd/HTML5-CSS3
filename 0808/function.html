@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>JavaScript Function</h1>
+  <script>
+  // 1.Declarative/Static function
+    function calc1(a, b) {
+    return a * b;
+  }
+  console.log(calc1(4, 8));
+  // 2.Dynamic/Anonymous Function
+    const calc2 = new Function('a', 'b', 'return a * b');
+    console.log(calc2(4, 8));
+  // 3. function literal
+    const calc3 = function(a, b) {return a *b;}
+    console.log(calc3(4, 9));
+
+    const calc4 = (a, b) => {console.log(a * b);}
+    const bbb = calc4;
+    bbb(4, 3);
+
+
+  </script>
+</body>
+</html>

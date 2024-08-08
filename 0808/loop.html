@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>JavaScript Loop</h1>
+  <script>
+    let fruits = ['Apple', 'Strawberry', 'Melon', 'Mango'];
+    // for (let i = 0; i < fruits.length; i++) {}; //Java의 일반 for문과 동일
+    // for (let a of fruits) { //Java의 향상된 for문과 동일
+    //   console.log(a);   
+    // }
+    const car = {name: 'Sonanta', price: '30000000', maker: 'Hyundai'};
+    for (const key in car) {
+      //console.log(key)  
+      console.log(`${key} ==> ${car[key]}`);  
+      }
+  </script>
+</body>
+</html>

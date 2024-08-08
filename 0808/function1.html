@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Inner Fucntion & Closure</h1>
+  <script>
+    function outer(greeting) {
+      function inner(whom) {
+        console.log(greeting + ', ' + whom);       
+      }
+      inner('jimin');
+      //console.log(whom) -> outer는 inner의 variables에 접근할 수 없음
+    }
+    outer('Hello');
+    // inner('chulsh') -> 외부에서는 outer를 통하지 않고는 inner에 접근할 수 없음
+
+    function outer1(greeting) {
+      //return greeting + ', jimin'; //string literal
+      //return 5; //number literal
+      //return false; //boolean leteral
+      //return ['Mango', 'Apple']; array literal
+      //return {name: 'Sonata', price: 30000000}; //object literal
+      return function inner1() {console.log('Hello, World');} //function literal -> Closure
+    }
+    const result1 = outer1('Hello');
+    //console.log(result)
+    result1(); //함수를 return했기 때문에 함수로 받음
+
+    function outer2(greeting1) {
+      return function inner2(whom1) {console.log(greeting1 + ', ' + whom1);}
+    }
+    const result2 = outer2('Hello');
+    result2('jimin'); 
+    result2('chulsu');
+    const eval = outer2('Good Morning');
+    eval('jimin');
+  </script>
+</body>
+</html>
