@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>계산 퀴즈</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/javascript.js"></script>
+</head>
+<body>
+  <form name="myform" id="myform">
+    <fieldset id="quiz">
+      <legend><h1>계산 퀴즈</h1></legend>
+      <div>이름과 계산의 답을 입력한 후 완료 단추를 눌러주세요.</div>
+      
+      <div class="name">
+        <label for="username">이름: </label>
+        <input type="text" id="username" name="username">
+      </div>
+
+      <ol>
+        <li>
+          <div class="question-container">
+            <span class="question-text">5 + 6 =</span>
+            <input type="text" class="answer">
+          </div>
+        </li>
+        <li>
+          <div class="question-container">
+            <span class="question-text">8 - 3 =</span>
+            <input type="text" class="answer">
+          </div>
+        </li>
+        <li>
+          <div class="question-container">
+            <span class="question-text">7 x 6 =</span>
+            <input type="text" class="answer">
+          </div>
+        </li>
+        <li>
+          <div class="question-container">
+            <span class="question-text">15 ÷ 3 =</span>
+            <input type="text" class="answer">
+          </div>
+        </li>
+        <li>
+          <div class="question-container">
+            <span class="question-text">8 + 6 - 3 x 2 ÷ 2 =</span>
+            <input type="text" class="answer">
+          </div>
+        </li>
+      </ol>
+
+      <div class="button-container">
+        <button type="button" id="complete">완료</button>
+      </div>
+    </fieldset>
+    <fieldset id="result">
+      <legend><h1>퀴즈 결과</h1></legend>
+      <div id="result-content"></div>
+    </fieldset>
+  </form>
+</body>
+</html>
