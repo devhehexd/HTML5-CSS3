@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.addEventListener('load', init, false);
+    function init() {
+      // const original = document.querySelector('#original');
+      // original.addEventListener('change', myChange, false);
+      const email = document.querySelector('#email');
+      email.addEventListener('change', myChange, false);
+    }
+    function myChange(evt){
+      // console.log(evt.target.value);
+      // document.querySelector('#target').value = evt.target.value;
+      const user = evt.target.value; //user가 입력한 값
+      const regex = new RegExp("([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\"\(\[\]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\[[\t -Z^-~]*])");
+      if(regex.test(user)) { //user가 제대로 email을 입력했다면
+        document.body.style.backgroundColor = 'yellow';
+        alert('Success');
+      } else { //그렇지 않다면
+        document.body.style.backgroundColor = 'red';
+        alert('Failure');
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Form & Event</h1>
+  <form id="myform">
+    <p>
+      Email: <input type="email", id="email" size="40" />
+    </p>
+    <!-- <p>
+      Original: <input type="text" id="original" size="40" />
+    </p>
+    <p>
+      Target: <input type="text" id="target" size="40" />
+    </p> -->
+  </form>
+</body>
+</html>
