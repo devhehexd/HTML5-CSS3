@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //ES5
+    (function(){
+      var a = 100;
+      switch(a) {
+        case 100:
+          var a = 200;
+          break;
+      }
+      console.log(a);
+    })();
+
+    //ES6
+    (function(){
+      let a = 100;
+      switch(a) {
+        case 100:
+          let a = 200;
+          break;
+      }
+      console.log(a);
+    })();
+  </script>
+</body>
+</html>
